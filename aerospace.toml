@@ -122,6 +122,10 @@ automatically-unhide-macos-hidden-apps = true
     alt-left = 'workspace prev'
     alt-right = 'workspace next'
 
+    # alt workspace left and right keys
+    alt-p = 'workspace prev'
+    alt-n = 'workspace next'
+
     #  alt + f mac os full screen
     alt-f = 'fullscreen'
     cmd-alt-f = 'macos-native-fullscreen'

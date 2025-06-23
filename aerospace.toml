@@ -10,8 +10,14 @@ after-login-command = []
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
-  'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0x00000000 width=12.0'
+  'exec-and-forget borders active_color=0xff40a4ff inactive_color=0x00000000 width=12.0'
 ]
+
+on-focus-changed = [
+  'exec-and-forget [ $(aerospace list-windows --workspace focused | wc -l) -eq 1 ] && borders width=0.0 || borders width=16.0', # remove borders for spaces with 1 window
+  'move-mouse window-lazy-center'  # Mouse lazily follows any focus (window or workspace)
+]
+
 # Start AeroSpace at login
 start-at-login = true
 
@@ -122,7 +128,7 @@ automatically-unhide-macos-hidden-apps = true
     alt-left = 'workspace prev'
     alt-right = 'workspace next'
 
-    # alt workspace left and right keys
+    # alt workspace controls
     alt-p = 'workspace prev'
     alt-n = 'workspace next'
 
